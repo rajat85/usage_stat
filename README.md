@@ -23,6 +23,6 @@ Application should be up and running now.
 ### Load Testing
 I have done load/stress testing using `siege`.
 To perform load testing, please run below commands from the terminal:
--	`brew install siege`
-	-	siege -r 10 -c 100 http://localhost:3000/top_urls.json
-	-	siege -r 10 -c 100 http://localhost:3000/top_referrers.json
+
+-	siege -r 10 -c 100 http://localhost:3000/top_urls.json
+-	siege -r 10 -c 100 http://localhost:3000/top_referrers.json
