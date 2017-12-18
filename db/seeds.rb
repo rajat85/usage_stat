@@ -7,6 +7,10 @@ def db_name
   "postgresql://#{config['username']}:#{config['password']}@127.0.0.1:5432/#{config['database']}"
 end
 
+unless File.exists?(csv_file_path)
+  abort "File doesn't exists #{csv_file_path}."
+end
+
 puts "Executing seed..."
 puts "Executing commad: cat #{csv_file_path} | psql --dbname=#{db_name} -c 'COPY page_visits FROM STDIN WITH CSV HEADER'."
 status = system "cat #{csv_file_path} | psql --dbname=#{db_name} -c 'COPY page_visits FROM STDIN WITH CSV HEADER'"
