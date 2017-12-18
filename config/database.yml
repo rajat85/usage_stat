@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  username: <%= ENV['DB_USERNAME'] %>
+
+development:
+  <<: *default
+  database: usage_stat_development
+  password: ''
+
+test:
+  <<: *default
+  database: usage_stat_test
+
+production:
+  <<: *default
+  database: usage_stat_production
