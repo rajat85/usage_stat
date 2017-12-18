@@ -7,6 +7,7 @@
 	- psql (PostgreSQL) 10.1
 * System dependencies
 	- yarn (https://yarnpkg.com/en/)
+	- siege (http://brewformulas.org/Siege)
 * Database creation
 	- postgres=> `CREATE DATABASE usage_stat_development`;
 * cd to the designated directory of the downloaded application and run below mentioned commands in chronological order:
